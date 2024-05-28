@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+*{
+    margin: 0;
+}
+
+.PaginaNutritie{
+  
+
+    position: absolute;
+    z-index: 1;
+
+    background: url('./photo/background3.jpg');
+    background-position:right; 
+    background-size: cover;
+
+    height: 100vh; /*100% din pagina (view high)*/
+    width: 100vw;
+    overflow: hidden; /*fara scroll */
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+
+   
+}
+
+#title {
+   
+    margin-top: 200px; /* distanta de sus pagina */
+}
+
+#Titlu{
+    margin: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 50px; /* marimea titlului */
+    color: rgb(255, 255, 255);
+}
+
+#Titlu2{
+    margin:150px;
+    text-align:left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    color:rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+.flip-card{
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    right: 100px;
+
+    width: 40%;
+    height: 60%;
+    perspective: 1000px;
+}
+
+.menu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  
+    color: rgb(255, 255, 255);
+    
+    
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+}
+.flip{
+    transform: rotateY(180deg);
+}
+.listabuton{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.item{
+    display: flex;
+    align-items: center;
+    height: 18%;
+    margin-bottom: 10px;
+    background: rgba(153, 153, 153, 0.458);
+
+    /*border: 5px solid black;
+    border-radius: 15px;*/
+   
+    vertical-align: middle;
+    font-size: xx-large;
+    cursor: pointer;
+}
+.butonase{
+    background: url('https://api.iconify.design/uil/angle-right-b.svg?color=white') ;
+    position:absolute;
+    z-index: 2;
+    right: 10px;
+  
+    width: 30px;
+    height: 30px;
+   
+    background-size:100% 100%;
+    transition: all 0.5s linear;
+}
+.invarte{
+    background: url('https://api.iconify.design/mdi/rotate-orbit.svg?color=white');
+    position:absolute;
+    z-index: 2;
+    top:60px;
+    right: 25%;
+
+    visibility: hidden;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+   
+    background-size:100% 100%;
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+.citit{
+    background: url('https://api.iconify.design/ph/read-cv-logo.svg') no-repeat center center / contain;
+}
+li>p{
+   
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+.item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 3px solid rgb(95, 200, 236);
+    border-right: 3px solid rgb(95, 200, 236);
+ 
+    animation: border-top-right 3s infinite alternate;
+}
+.item:after { 
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid rgb(95, 200, 236);
+    border-left: 2px solid rgb(95, 200, 236);
+    animation:border-bottom-left 3s infinite alternate;
+}
+@keyframes border-top-right{
+    0%   {width: 0px; height: 0px;}
+    25%  {width: 99.9%; height: 0px;}
+    50%  {width: 99.9%; height: 99%;}
+    100% {width: 99.9%; height: 99%;}
+
+}
+@keyframes border-bottom-left{
+    0%     {width: 0px; height: 0px; opacity: 0;}
+    50%    {width: 0px; height: 0px; opacity: 0;}
+    50.1%  {width: 0px; height: 0px; opacity: 1;}
+    75%    {width: 99.9%; height: 0px; opacity: 1;}
+    100%   {width: 99.9%; height: 100%; opacity: 1;}
+}
+
+.submenu{
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    color:rgb(225, 195, 195);
+    text-align: justify;
+    font-size: large;
+    overflow: auto;
+    padding: 10px;
+    transition: all 1s;
+    background: rgb(68, 68, 68);
+}
+
+.intro{
+    height: 70%;   
+}
+
+.nutritie{
+    height:53%;
+}
+.nutrienti{
+    height: 50%;
+}
+.macro{
+    height: 45%;
+}
+.importanta{
+    height: 45%;
+}
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+.texte{
+    padding-left: 15px;
+}

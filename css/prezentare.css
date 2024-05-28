@@ -1,0 +1,338 @@
+/*
+#Titlu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:auto;
+    
+}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+@import url('https://unpkg.com/transition-style/transition.circles.min.css');
+@import "transition-style";
+
+*{
+    margin: 0;
+}
+
+.PaginaPrincipala{
+    /* .PaginaPrincipala - pagina principala 
+    background: url('./photo/background2.jpg');
+    background-position: center; 
+    background-size: cover;
+    */
+    background-color: rgb(26, 26, 26);
+    height: 100vh; /*100% din pagina (view high)*/
+    overflow: hidden; /*fara scroll */
+
+}
+
+#title {
+   
+    margin-top: 10%; /* distanta de sus pagina */
+}
+
+#Titlu{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size:50px; /* marimea titlului */
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(138, 127, 127); /* chenarul */
+    background: url('./photo/back.png');
+    -webkit-background-clip: text; /* sa apara 'back.png' doar pe text */
+    background-position: 0 0;
+    animation: atestat 20s linear infinite;
+
+}
+@keyframes atestat {
+    100%{ /* cat la % din timp apare din 'back.png' */
+        background-position: 2000px 0; /* viteza cu care merge */
+        
+    }
+   
+}
+
+#Titlu2{
+    margin:150px;
+    text-align: center;
+    font-family:monospace;
+    color:rgb(160, 155, 148);
+    font-size: 25px;
+    
+}
+
+#Semnatura{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width: 45px;
+    height: 45px;
+    text-align:left;
+    font-family:'Mr De Haviland', sans-serif;
+    color:rgb(184, 138, 138);
+    cursor: pointer;
+    transition: all 0.8s linear;
+    
+}
+#Semnatura:hover{
+    transform: translateY(-10px);
+    width:30px;
+    height: 30px;
+    background-image: rgb(255, 192, 203);
+}
+
+
+
+#gantera{
+    position:absolute;
+    bottom: 3%;
+    left:-3%;
+    width: 15%;
+    height: 15%;
+    background-image:  url('https://api.iconify.design/mdi/gym.svg?color=grey&rotate=180deg&flip=horizontal%2Cvertical');
+    background-size:100% 100%;
+    cursor: pointer;
+    transition: all 0.8s linear;
+
+}
+#gantera:hover{
+    transform: translateY(-10px);
+    width:100px;
+    height: 100px;
+    
+}
+
+
+
+#buton{
+    position:absolute;
+    z-index: 2;
+    right: 29px;
+    top: 25px;
+    width: 25px;
+    height: 25px;
+    border:none;
+    background-image: url('https://api.iconify.design/fa6-solid/bars-staggered.svg?color=bisque');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+#buton:hover{
+    transform: translateY(-5px);
+    width: 30px;
+    height: 30px;
+    background-image: url('https://api.iconify.design/fa6-solid/bars-staggered.svg?color=rgb(200, 119, 132)');
+}
+
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+}
+
+i{
+    color:rgb(0, 0, 0);
+    font-size:70px;
+    text-shadow: 0 0 8px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0);
+    animation: heartbeat 2s infinite; 
+
+}
+
+@keyframes heartbeat{
+    75%{
+        transform: scale(1.10);
+        
+    }
+   
+}
+
+
+
+.meniu{
+    display: none;
+}
+.apare{
+    visibility:visible;
+
+}
+
+.pagina2 {
+    
+     /*100% din pagina (view high)*/
+    overflow: hidden; /*fara scroll */
+
+    position: absolute;
+    top:0px;
+    right: 0px;
+    height: 0vh;
+    width: 0vw;
+    border-bottom-left-radius: 50%;
+
+    visibility: hidden;
+    opacity: 0.7;
+
+    background: url('./photo/background2.jpg');
+    background-position: center; 
+    background-size: cover;
+   
+  
+
+    transition: all 0.6s linear .2s;
+}
+
+.apare-pagina2{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    border-bottom-left-radius: 0%;
+}
+
+
+
+#b1{
+    top: 150px;
+    left: 250px;
+}
+#b2{
+    top: 230px;
+    left: 530px;
+}
+#b3{
+    top: 290px;
+    left: 808px;
+}
+#b4{
+    top: 350px;
+    left: 1086px;
+}
+.button{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   color: rgb(255, 255, 255);
+
+}
+
+.button{
+    width:200px;
+    height: 50px;
+    background-color: rgb(144, 132, 132);
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+    
+.button:before { 
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top:3px solid rgb(0, 255, 0);
+    border-right: 3px solid rgb(0, 255, 0);
+    animation:border-top-right 3s infinite alternate;
+}
+
+.button:after { 
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid rgb(0, 255, 0);
+    border-left: 2px solid rgb(0, 255, 0);
+    animation:border-bottom-left 3s infinite alternate;
+}
+
+@keyframes border-top-right{
+    0%   {width: 0px; height: 0px;}
+    25%  {width: 200px; height: 0px;}
+    50%  {width: 200px; height: 48px;}
+    100% {width: 200px; height: 48px;}
+
+}
+@keyframes border-bottom-left{
+    0%     {width: 0px; height: 0px; opacity: 0;}
+    50%    {width: 0px; height: 0px; opacity: 0;}
+    50.1%  {width: 0px; height: 0px; opacity: 1;}
+    75%    {width: 200px; height: 0px; opacity: 1;}
+    100%   {width: 200px; height: 48px; opacity: 1;}
+}
+
+#puls{position:absolute;
+    top:405px;
+    left:1250px;
+    width: 44px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/pajamas/status-health.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
+
+#apa{
+    position:absolute;
+    top:188px;
+    left:699px;
+    width: 44px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/line-md/beer-alt-twotone-loop.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
+
+#mar{
+    position:absolute;
+    top:187px;
+    left:668px;
+    width: 44px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/icon-park-twotone/apple-one.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
+
+#silueta{  
+    position:absolute;
+    top:57px;
+    left:408px;
+    width: 44px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/solar/body-shape-broken.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
+
+#sport{
+    position:absolute;
+    top:289px;
+    left:970px;
+    width: 65px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/game-icons/body-balance.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
+
+#run{ 
+    position:absolute;
+    top:292px;
+    left:800px;
+    width: 50px;
+    height: 148px;
+    background-image: url('https://api.iconify.design/solar/running-2-linear.svg');
+    background-size:100% 100%;
+    transition: all 0.8s linear;
+}
